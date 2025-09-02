@@ -54,7 +54,9 @@ function acc(e) {
 
 function faq_section(e) {
     let fAq = e.target.parentElement;
-    fAq.classList.toggle("faqshow")
+    fAq.classList.toggle("faqshow");
+
+    
 
     // document.querySelector(".question").classList.toggle("faqshow");
 

@@ -529,8 +529,8 @@ header {
     position: fixed;
     z-index: 3;
 
-    right: 1.2vw;
-    top: 31.7vw;
+    right: 2vw;
+    top: 565rem;
     border-radius: 50%;
 
 }
@@ -541,8 +541,8 @@ header {
     width: 4rem;
     height: 4rem;
     position: fixed;
-    right: 10px;
-    top: 30rem;
+    right: 1vw;
+    top: 14.565rem;
     background-color: white;
     border-radius: 50%;
     border: 1px solid rgb(6, 178, 6);
@@ -665,7 +665,7 @@ header {
 footer {
 
 
-    width: 100vw;
+    width: 100%;
 
     background-color: #fcffff;
 
@@ -680,7 +680,7 @@ footer {
     width: 100vw;
     background-color: #f7f7f7;
 
-    font-size: 1.1vw;
+    font-size: .5rem;
     padding: 1rem 2rem;
 }
 
@@ -791,7 +791,7 @@ footer {
     height: 10vw;
     overflow: hidden;
     margin-top: 1vh;
-    font-size: 7vw;
+    font-size: 1rem;
     padding: 0.2vw;
 
 
@@ -833,7 +833,7 @@ footer {
 }
 
 .copyright_section {
-    font-size: .79vw;
+    font-size: .5rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -863,7 +863,7 @@ footer {
 .footer_bottom_left {
     display: flex;
     gap: 1vw;
-    font-size: 1.5vw;
+    font-size: .5rem;
 }
 
 .social-links {
