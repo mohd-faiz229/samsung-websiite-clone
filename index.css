@@ -13,15 +13,20 @@
     overflow: hidden;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
     height: 100%;
+    width: 100%;
 }
 
 
 
 .logo {
-    height: 100%;
-    ;
+    height: 5rem;
+    padding: 0rem;
     margin-right: 1.5rem;
 }
 
@@ -155,7 +160,7 @@ header {
 
 
 .header-left li {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 3px solid transparent;
     font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
@@ -168,7 +173,8 @@ header {
 }
 
 .header-left li:first-child {
-    border-bottom: 3px solid transparent;
+    padding: 0rem;
+    border-bottom: 0px solid transparent;
 }
 
 .shop-items {
@@ -456,7 +462,7 @@ header {
 
 
 .buttons button {
-    font-size: 1.2vw;
+    font-size: 1rem;
     padding: .5rem;
     z-index: 2;
 
@@ -472,7 +478,7 @@ header {
     color: black;
 
     border-radius: 40px;
-    width: 5vw;
+    width: 2rem;
 
 }
 
@@ -513,39 +519,33 @@ header {
 .content button:nth-child(2) {
     background-color: black;
     color: white;
-    border-radius: 1.2vw;
+    border-radius: 2rem;
 
 
 }
 
-/* customer-care-section */
-
-.customer-care-background {
-
-    background-color: rgb(6, 178, 6);
-    animation: glow 4s infinite linear;
-    width: 3rem;
-    height: 3rem;
+/* stomer-care-section */
+.customer-care {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
 
     right: 2vw;
     top: 565rem;
-    border-radius: 50%;
-
 }
 
 
-.customer-care-image {
-    z-index: 4;
-    width: 4rem;
-    height: 4rem;
-    position: fixed;
-    right: 1vw;
-    top: 14.565rem;
-    background-color: white;
+
+.customer-care-background {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 50%;
-    border: 1px solid rgb(6, 178, 6);
+
+    background-color: #007aff;
+    animation: glow 1.5s infinite;
+    z-index: -1;
+    top: -1.5rem;
+    left: -1.5rem;
 
 }
 
@@ -638,25 +638,13 @@ header {
 }
 
 .product_section_second {
-    display: grid;
-    gap: 1.5rem;
+    display: flex;
+    gap: .5rem;
     height: 18vw;
-
-
-
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: scroll
 }
 
-.product_section_second>div:nth-child(1) {
-    grid-column: 1/2;
 
-}
-
-.product_section_second>div:nth-child(2) {
-    grid-column: 2/3;
-
-}
 
 
 /* footer */
@@ -665,7 +653,7 @@ header {
 footer {
 
 
-    width: 100%;
+    width: 100vw;
 
     background-color: #fcffff;
 
@@ -677,7 +665,7 @@ footer {
 
 
 .footer-top {
-    width: 100vw;
+
     background-color: #f7f7f7;
 
     font-size: .5rem;
@@ -788,7 +776,7 @@ footer {
 
 .question {
     font-weight: 500;
-    height: 10vw;
+    height: 3rem;
     overflow: hidden;
     margin-top: 1vh;
     font-size: 1rem;
@@ -879,16 +867,18 @@ footer {
     height: 20vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: .5rem;
+    overflow: scroll;
+    margin-bottom: .5rem;
 
 
 }
 
-/* .main-product-card::-webkit-scrollbar {
+.main-product-card::-webkit-scrollbar {
     height: 1vw;
 
     padding: 1vw;
-} */
+}
 
 /* .main-product-card::-webkit-scrollbar-thumb {
     background: #2e373f;
