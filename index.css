@@ -478,7 +478,7 @@ header {
     color: black;
 
     border-radius: 40px;
-    width: 2rem;
+    width: 4rem;
 
 }
 
@@ -526,46 +526,54 @@ header {
 
 /* stomer-care-section */
 .customer-care {
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    z-index: 2;
-
-    right: 2vw;
-    top: 565rem;
+    right: 1rem;
+    top: 30rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 
 .customer-care-background {
-    position: absolute;
-    width: 4.5rem;
-    height: 4.5rem;
+
+    background-color: rgb(6, 178, 6);
+    animation: glow 3s linear infinite;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    z-index: 1;
+
+
     border-radius: 50%;
 
-    background-color: #007aff;
-    animation: glow 1.5s infinite;
-    z-index: -1;
-    top: -1.5rem;
-    left: -1.5rem;
-
 }
+
+
 
 
 
 
 .customer-care img {
-
+    position: absolute;
+    z-index: 2;
+    top: 0rem;
+    right: 0rem;
     width: 100%;
     height: 100%;
+    border: 1px solid rgb(6, 178, 6);
+    background-color: white;
+    border-radius: 50%;
 }
 
 @keyframes glow {
     100% {
-        transform: scale(1.7);
+        transform: scale(2);
         opacity: .2;
 
     }
-
-
 }
 
 
@@ -668,7 +676,7 @@ footer {
 
     background-color: #f7f7f7;
 
-    font-size: .5rem;
+    font-size: 1rem;
     padding: 1rem 2rem;
 }
 
@@ -821,7 +829,7 @@ footer {
 }
 
 .copyright_section {
-    font-size: .5rem;
+    font-size: 1rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -842,6 +850,7 @@ footer {
 
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -851,11 +860,11 @@ footer {
 .footer_bottom_left {
     display: flex;
     gap: 1vw;
-    font-size: .5rem;
+    font-size: 1rem;
 }
 
 .social-links {
-    font-size: 1.5vw;
+    font-size: 1rem;
     display: flex;
     gap: 1vw;
 
@@ -863,10 +872,11 @@ footer {
 }
 
 .product-section {
-    width: 100vw;
+    width: 100%;
     height: 20vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+
+
     gap: .5rem;
     overflow: scroll;
     margin-bottom: .5rem;
@@ -874,25 +884,30 @@ footer {
 
 }
 
-.main-product-card::-webkit-scrollbar {
-    height: 1vw;
-
-    padding: 1vw;
+.product-section::-webkit-scrollbar {
+    width: 8px;
+    /* vertical scrollbar thickness */
+    height: 8px;
+    /* horizontal scrollbar thickness */
 }
 
-/* .main-product-card::-webkit-scrollbar-thumb {
-    background: #2e373f;
-    border-radius: 20px;
+.product-section::-webkit-scrollbar-thumb {
+    background: #5d646c;
+    /* thumb color */
+    border-radius: 7px;
+    /* rounded corners */
+    border: 20px solid #3a3232;
+    /* makes thumb slimmer by creating space */
+}
 
 
-} */
 
 
 .main-product-card {
     font-family: "SamsungOne", "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
 
     flex: 0 0 auto;
-    width: 23vw;
+    width: 30rem;
     height: 100%;
     position: relative;
     display: flex;
@@ -948,11 +963,11 @@ footer {
     width: 50vw;
     display: flex;
     top: 0rem;
-    right: -60rem;
+    right: -120rem;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     padding: 5px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: .5s ease;

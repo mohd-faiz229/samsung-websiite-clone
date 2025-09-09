@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sign_up.css">
+
+</head>
+
+<body>
+    <div class="hero_section">
+        <form action="" onsubmit="handleSubmit(event)">
+            <div class="logo"><img src="./product-images/3adc45fb-e06b-4362-aa94-43ed21b68936.png" alt=""></div>
+            <div class="input_box"><input oninput="emailCheck()" type="email" placeholder="Email" id="email"><span
+                    class="valid_email_hide">✅</span></div>
+            <div id="error">
+                <div class="invalid_email_hide">invalid id</div>
+            </div>
+
+
+
+
+
+            <div class="input_box"><input oninput="passwordCheck()" class="password" type="password"
+                    placeholder="password"><span class="valid_password_hide">✅</span>
+            </div>
+
+            <span class="invvalid_password_hide">password must be 8-16 characters long, include at least 1 number, 1
+                uppercase
+                letter, 1 lowercase letter, 1 special
+                character, and contain no spaces.
+            </span>
+
+            <div class="forget_pass">Forget password</div>
+            <input type="submit" value="Sign in">
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="copyright_section">
+            <p>Copyright ⓒ 1995-2025 SAMSUNG All Rights reserved.</p>
+
+            <p>Please dispose of e-waste and plastic waste responsibly.For more information or e-waste pick up,
+                please call 1800 5 7267864 or <a href="">click-here</a> for more
+                details.
+                <br>For more information or e-waste pick up, please call 1800 5 7267864 or click here for more
+                details.
+
+            </p>
+
+            <p>Registered Office Address: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001
+                Corporate Identification Number (CIN): U31900DL1995PTC071387
+            </p>
+        </div>
+        <div class="divider"></div>
+        <div class="footer_bottom">
+
+            <ul class="footer_bottom_left">
+                <li>India/English</li>
+                <li class="divider"></li>
+                <li>Privacy</li>
+                <li>Legal</li>
+                <li>CSR Policy</li>
+                <li>Sitemap</li>
+            </ul>
+
+
+            <ul class="social-links">
+                <li>Stay in Loop ?</li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-x-twitter"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-brands fa-whatsapp"></i></li>
+            </ul>
+
+
+        </div>
+    </footer>
+
+    <script src="signup.js"></script>
+
+</body>
+
+
+</html>
