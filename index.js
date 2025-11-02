@@ -20,46 +20,45 @@ const pop_upTimeout = setTimeout(pop_up, 3000);
 
 
 
-var countDownDate = new Date("Jan 5, 2026 23:59:59").getTime();
+// -----------faq section -----------------
+const faqItems = document.querySelectorAll('.faq-item');
 
-var countdownFunction = setInterval(function () {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
 
-    // Time calculations
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-    document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-    if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "<span style='color:red;'>Offer Ended</span>";
+// -------slider js -------------
+let SliderButtonclick = 0;
+function updateSliderPostion() {
+    if (SliderButtonclick < 7 && SliderButtonclick >= 0) {
+        document.querySelector(
+            ".slider-scroll>ul:nth-child(1)"
+        ).style.transform = `translateX(-${SliderButtonclick * 18.85}vw)`;
+        document.querySelector(".loader>div").style.width = `${(SliderButtonclick + 1) * 14.2857
+            }%`;
+    } else if (SliderButtonclick < 0) {
+        SliderButtonclick = 0;
+    } else {
+        SliderButtonclick = SliderButtonclick - 1;
     }
-}, 1000);
-
-// function for accordian
-
-function acc(e) {
-    let para = e.target.parentElement;
-    para.classList.toggle("show");
 }
 
-// function for faq section
+function sliderMoveRight() {
+    SliderButtonclick = SliderButtonclick + 1;
+    updateSliderPostion();
+}
 
-function faq_section(e) {
-    let fAq = e.target.parentElement;
-    fAq.classList.toggle("faqshow");
+function sliderMoveLeft() {
+    SliderButtonclick = SliderButtonclick - 1;
+    updateSliderPostion();
+}
 
     
 
-    // document.querySelector(".question").classList.toggle("faqshow");
 
 
 
-}
+
